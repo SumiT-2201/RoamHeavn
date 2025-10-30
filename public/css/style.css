@@ -1,0 +1,191 @@
+/* Page background & full height */
+/* body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f1f2; /* page background */
+*/
+
+/* Container spacing + background fix */
+.container {
+  flex: 1;
+  padding-top: 2rem;
+  background: transparent !important; /* remove white box */
+}
+
+/* Font & layout for body */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #e6f1f2 !important;
+}
+
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: #e6f1f2;
+}
+
+.fa-compass {
+  color: #02757a;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+  background-color: #e6f1f2;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin: 1rem;
+  vertical-align: middle;
+}
+
+/* Footer (match page background) */
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #e6f1f2 !important; /* unified background */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card {
+  border: none !important;
+  border: none;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text p {
+  font-weight: 400 !important;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* New Page */
+.add-btn {
+  background: color #02757a !important;
+  border: none !important;
+}
+
+/* Edit Page */
+.edit-btn {
+  background-color: #02757a !important;
+  border: none !important;
+}
+
+/* Show Page */
+.show-img {
+  height: 30vh;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Map */
+#map {
+  height: 400px;
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.delete-btn {
+  background-color: red !important;
+  border: none;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Booking Button (keep only green version) */
+.bookButton {
+  background-color: #28a745; /* green */
+  color: black;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bookButton:hover {
+  background-color: #218838; /* darker green hover */
+}
+
+.container,
+.row,
+.col,
+.listing-card {
+  background: transparent !important; /* remove white block */
+}
+
+.card {
+  background-color: #e6f1f2 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.row.mt-3 {
+  background-color: #e6f1f2 !important;
+}
+
+.filter.selected {
+  border: 2px solid #02757a;
+  border-radius: 8px;
+  opacity: 1 !important;
+}
