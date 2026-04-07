@@ -134,26 +134,28 @@ app.use((err, req, res, next) => {
   //   res.status(statusCode).send(message);
 });
 
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
 app.post("/api/jarvis", async (req, res) => {
   const { message } = req.body;
 
   try {
-    const response = await axios.post("http://localhost:11434/api/generate", {
-      model: "llama3",
-      prompt: message,
-      stream: false,
-    });
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const result = await model.generateContent(message);
+    const reply = result.response.text();
 
-    const reply = response.data.response;
     res.json({ reply });
   } catch (err) {
-    console.error("❌ Ollama Error:", err.message);
+    console.error("❌ Gemini Error:", err.message);
     res
       .status(500)
       .json({ reply: "Jarvis is having trouble responding right now." });
   }
 });
 
-app.listen(8080, () => {
-  console.log("server is listening to port 8080");
+app.listen(process.env.PORT || 8080, () => {
+  console.log("server is listening on port " + (process.env.PORT || 8080));
 });
+
+module.exports = app;

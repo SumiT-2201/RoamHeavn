@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: roamheavn
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: CLOUD_NAME
+        sync: false
+      - key: CLOUD_API_KEY
+        sync: false
+      - key: CLOUD_API_SECRET
+        sync: false
+      - key: LOCATIONIQ_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ATLASDB_URL
+        sync: false
+      - key: SECRET
+        sync: false
